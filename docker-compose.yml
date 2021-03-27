@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  hospital-management-db:
+    image: postgres
+    restart: always
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_PASSWORD: thuyvi2309
+      POSTGRES_USER: adoptmeuser
+      POSTGRES_DB: adoption_db
+    volumes:
+      - adopt_me_data:/var/lib/postgresql/data/
+
+volumes:
+  adopt_me_data:
